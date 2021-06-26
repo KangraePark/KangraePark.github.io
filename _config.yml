@@ -12,7 +12,7 @@ relative_permalinks: false
 title:            Kangrae Park
 tagline:          'A Jekyll theme'
 description:      'Department of Mathematical Sciences, Seoul National University'
-url:              https://kangraepark.github.io/
+url:              www.kangraepark.com
 baseurl:          /
 
 author:
