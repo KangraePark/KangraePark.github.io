@@ -11,5 +11,5 @@ use_math: true
 Hi, I am preparing some contents.
   </p>
 -----
-$a^2+b^2=c^2$
+$a^2+b^2=c^2$ is abcd $$a^2=b^2$$
 
