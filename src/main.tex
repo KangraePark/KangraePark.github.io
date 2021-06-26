@@ -1,1 +1,77 @@
-asdf
+\documentclass[11pt, twoside, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsfonts, amsmath, amssymb, amsthm, latexsym}
+\usepackage{physics}
+\usepackage{kotex}
+\usepackage{varwidth}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathtools}
+
+\newtheorem{claim}{Claim}{}
+\newtheoremstyle{prob}{3em}{3em}{}{0pt}{\bfseries}{.}{5pt plus 1pt minus 1pt}{\thmname{#1}\thmnumber{#2}}
+\theoremstyle{prob}
+\newtheorem{problem}{}
+\newtheorem{thm}{Thm}{}
+%\everymath{\displaystyle}
+%\graphicspath{ {./image/} }
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mfk}{\mathfrak}
+\newcommand{\nsub}{\triangleleft}
+\newcommand{\ol}{\overline}
+
+\usepackage{xcolor} \pagecolor[rgb]{0.2,0.2,0.2} \color[rgb]{1,1,1}
+
+\DeclareMathOperator\supp{supp}
+
+\begin{document}
+\title{Introduction to Differential Geometry 2 HW2}
+\author{Kangrae Park (2019-12419)}
+\date{\today}
+\maketitle
+\setlength{\parindent}{0mm}%들여쓰기
+​\setlength{\parskip}{0mm}%문단 간격
+\setstretch{1.2}%줄간격
+\setlength{\belowdisplayskip}{5pt} \setlength{\belowdisplayshortskip}{2pt}
+\setlength{\abovedisplayskip}{5pt} \setlength{\abovedisplayshortskip}{2pt}
+
+\begin{problem}
+    Let $M$ be a manifold without boundary and let $g: M\to\mb{R}$ have 0 as regular value. Prove that the set of $x$ in $M$ with $g(x)\geq 0$ is a smooth manifold, with boundary equal to $g^{-1}(0)$.
+\end{problem}    
+
+\begin{proof}
+    Suppose $M\subseteq \mb{R}^n$. Denote $\{x\in M \, :\, g(x)\geq 0 \}$ by $N$. For every $x\in M$, there exists a open set $U\subseteq \mb{R}^m$ with $x\in U$ and open set $V\subseteq \mb{R}^n$ such that $V\cap M$ is diffeomorphic to $U$. If $g(x)=\delta>0$, then $g^{-1}(\delta/2, 2\delta)$ is open since $g$ is continuous. If we denote $V_1=g^{-1}(\delta/2, 2\delta)\cap V$, then $g^{-1}(\delta/2, 2\delta)\cap V\cap M$ is also open in $M$. Denote the diffeomorphism $t: U\to V\cap M$. Thus, $U_1=t^{-1}(g^{-1}(\delta/2, 2\delta)\cap V\cap M)$ is open set and there is a diffeomorphism $t\mid_{U_1}: U_1 \to V_1$ for open set $U_1\subseteq \mb{R}^m$ and $V_1\subseteq \mb{R}^n$. It is obvious that we could assume $U_1\subseteq \mb{H}^m$ by shifting. If $x\in g^{-1}(0)$, then we know that $d_x g \neq 0$. Since $x$ is a regular point, using Lemma 1, we know that $g^{-1}(0)$ is a $n-1$ dimensional manifold. Using Lemma 2, we know that $\ker d_x g=T_x g^{-1}(0)$ and $q=d_x g\mid_{\perp}: (T_x g^{-1}(0))^{\perp}\to T_{g(x)}\mb{R}$ is isomorphism. Since $g^{-1}(0)$ is a $n-1$ dimensional manifold, there exists a diffeomorphism $p_0: U_0\to V_0\cap g^{-1}(0)$ with a open set $U_0\subseteq \mb{R}^l$ and $x\in V_0 \subseteq \mb{R}^{n-1}$. Since $0$ is a regular value, we can assume that $r\in (-\epsilon, \epsilon)$ is regular value for some fixed $\epsilon>0$. Hence, we will shrink $V$ (and $U$) and assume that $\abs{g(v)}<\epsilon$ for every $v\in V$. Then we can represent $V$ as $\cup_{r\in (-\epsilon, \epsilon)} I_r\times \{r\}$ for some open interval $I_r\subseteq \mb{R}$ since $q$ is 1 dimensional and so $q$ is diffeomorphic to $\mb{R}$. Thus, $V\cap \{w\, : \,g(w)\geq 0 \}$ is represented by $\cup_{r\in [0, \epsilon)}  I_r\times \{r\}$. Hence, we have shown that $U\cap \{t^{-1}(w)\, : \, g(w)\geq 0\}\subseteq \mb{H}^{l+1}$. As a result, $N$ is a smooth manifold, with boundary equal to $g^{-1}(0)$.
+\end{proof}
+
+\begin{problem}
+    If $X$ is a compact manifold, show that every continuous map $X\to S^p$ can be uniformly approximated by a smooth map. If two smooth maps $X\to S^p$ are continuously homotopic, show that they are homotopic.
+\end{problem}
+
+\begin{proof}
+    \begin{thm}
+        Suppose $M$ is a smooth manifold with or without boundary, and $F: M\to \mb{R}^k$ is a continuous function. Given any positive function $\delta:M\to \mb{R}$, there exists a smooth function $\tilde{F}:M\to \mb{R}^k $ such that is $\delta$-close to $F$. If $F$ is smooth on a closed subset $A\subseteq M$, then $\tilde{F}$ can be chosen to be equal to $F$ on $A$.
+    \end{thm}
+    The above theorem is called Whitney Approximation Theorem for Functions. We will assume this theorem. 
+    We know that $S^p \subseteq \mb{R}^{p+1}$. We will prove the following claim.
+    \begin{claim}
+        For continuous function $f: X\to S^p$, there exists a continuous extension function $g$ of $f$.
+    \end{claim}
+    For every $x\in S^p$, denote $B_\epsilon(x)$ by a neighborhood of $x$. $B_\epsilon(x)$ are open cover of $S^p$. Since $S^p$ is compact, there exists a finite subcover $B_\epsilon(x_1), \cdots B_\epsilon(x_m)$. Since $\mb{R}^{p+1}\setminus S^p$ is open, we denote $B_\epsilon(x_i)$ by $A_i$ and $\mb{R}^{p+1}\setminus S^p=A_0$. Hence, $A_0,\cdots,A_m$ covers $\mb{R}^{p+1}$. We will use the partition of unity. Each $A_i$ 
+
+
+\end{proof}
+
+
+\end{document}
+
