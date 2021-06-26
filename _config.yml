@@ -19,6 +19,14 @@ author:
 
 paginate:         5
 
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
 # Custom vars
 version:          2.1.0
 
