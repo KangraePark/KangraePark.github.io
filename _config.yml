@@ -1,6 +1,8 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 # Permalinks
 permalink:        pretty
@@ -20,11 +22,7 @@ author:
 paginate:         5
 
 # Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
+
 
 
 # Custom vars
