@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Example 
+tags: 
+  - math
+use_math: true
 ---
 
 <p class="message"> 
@@ -8,4 +11,5 @@ title: Example
 Hi, I am preparing some contents.
   </p>
 -----
+$a^2+b^2=c^2$
 
