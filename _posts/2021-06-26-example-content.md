@@ -3,7 +3,6 @@ layout: post
 title: Example 
 tags: 
   - math
-use_math: true
 ---
 
 <p class="message"> 
