@@ -10,7 +10,7 @@ relative_permalinks: false
 
 # Setup
 title:            Kangrae Park
-tagline:          'A Jekyll theme'
+tagline:          'mathematics'
 description:      'Department of Mathematical Sciences, Seoul National University'
 url:              "kangraepark.github.io"
 baseurl:          ""
@@ -20,6 +20,8 @@ author:
   url:            https://twitter.com/mdo
 
 paginate:         5
+
+remote_theme: remote_theme: poole/hyde
 
 # Custom vars
 version:          2.1.0
