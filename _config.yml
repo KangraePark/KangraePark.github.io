@@ -12,7 +12,7 @@ relative_permalinks: false
 title:            Kangrae Park
 tagline:          'mathematics'
 description:      'Department of Mathematical Sciences, Seoul National University'
-url:              "kangraepark.github.io"
+url:              "https://kangraepark.github.io/"
 baseurl:          ""
 
 author:
