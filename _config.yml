@@ -21,7 +21,7 @@ author:
 
 paginate:         5
 
-remote_theme: remote_theme: poole/hyde
+remote_theme: poole/hyde
 
 # Custom vars
 version:          2.1.0
