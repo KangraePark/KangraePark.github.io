@@ -2,8 +2,6 @@
 ---
 layout: post
 title: Chacon Transformation
-tags: 
-  - math
 ---
 
 Chacon Transformation은 weak-mixing이면서 mixing은 아닌 대표적인 예시이다.
