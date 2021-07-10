@@ -13,7 +13,7 @@ title:            Kangrae Park
 tagline:          'A Jekyll theme'
 description:      'Department of Mathematical Sciences, Seoul National University'
 url:              /
-baseurl:          /
+baseurl:          "/Kangraepark"
 
 author:
   name:           'Kangrae Park'
